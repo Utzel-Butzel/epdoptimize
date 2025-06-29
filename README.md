@@ -1,6 +1,6 @@
 # EDP Optimize
 
-A JavaScript library for reducing image colors and dithering them to fit eInk displays with optimal visual quality.
+A JavaScript library for reducing image colors and dithering them to fit (color) eInk displays with optimal visual quality.
 
 ## Supported Displays
 
