@@ -1,0 +1,1 @@
+{"version":3,"file":"index.cjs.js","sources":["../src/index.ts"],"sourcesContent":["export const hello = (name: string): string => {\n  return `Hello, ${name}!`;\n};\n"],"names":["hello","name"],"mappings":"gFAAO,MAAMA,EAASC,GACb,UAAUA,CAAI"}

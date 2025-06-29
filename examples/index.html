@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EPDOptimize Example</title>
+    <script type="module" src="/index.ts"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 1rem;
+      }
+      canvas {
+        margin-top: 1rem;
+        border: 1px solid #ccc;
+      }
+      #downloadLink {
+        display: block;
+        margin-top: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>EPDOptimize Interactive Example</h1>
+    <input type="file" id="fileInput" accept="image/*" />
+    <canvas id="inputCanvas" style="display: none"></canvas>
+    <canvas id="outputCanvas"></canvas>
+    <a id="downloadLink" href="#" download="dithered.png">Download Result</a>
+  </body>
+</html>
