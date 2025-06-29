@@ -70,27 +70,6 @@ window.addEventListener("DOMContentLoaded", async () => {
   await processImage();
 });
 
-function getDitherOptions(ditherMethod: string, palette: string[]) {
-  if (ditherMethod === "none") {
-    return { ditheringType: "quantizationOnly", palette, calibrate: true };
-  }
-  if (ditherMethod === "ordered" || ditherMethod === "bayer") {
-    return {
-      ditheringType: "ordered",
-      orderedDitheringType: "bayer",
-      palette,
-      calibrate: true,
-    };
-  }
-  // Assume error diffusion
-  return {
-    ditheringType: "errorDiffusion",
-    errorDiffusionMatrix: ditherMethod,
-    palette,
-    calibrate: true,
-  };
-}
-
 function getDitherOptionsFromUI(palette: string[]) {
   const ditheringType = ditheringTypeSelect.value;
   const errorDiffusionMatrix = errorDiffusionMatrixSelect.value;

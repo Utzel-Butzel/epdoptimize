@@ -3,6 +3,9 @@
 
 name: Node.js Package
 
+env:
+  NAME: 'npm-deploy'
+
 on:
   release:
     types: [created]
