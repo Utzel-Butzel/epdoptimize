@@ -22,7 +22,16 @@
   </head>
   <body>
     <h1>EPDOptimize Interactive Example</h1>
+    <p>
+      <a href="https://github.com/Utzel-Butzel/epdoptimize"
+        >GitHub repository</a
+      >
+      |
+      <a href="http://paperlesspaper.de/en">eInk picture frames</a>
+    </p>
+    <input type="file" id="fileInput" accept="image/*" />
 
+    <br />
     <label for="paletteSelect">Palette:</label>
     <select id="paletteSelect">
       <option value="default">Default</option>
@@ -35,8 +44,6 @@
       <option value="spectra6" selected>Spectra 6</option>
       <option value="acep">AcEP</option>
     </select>
-    <button id="updateButton" type="button">Update</button>
-    <input type="file" id="fileInput" accept="image/*" />
 
     <br />
 
@@ -64,6 +71,7 @@
     <select id="orderedDitheringType">
       <option value="bayer">Bayer</option>
     </select>
+    <br />
     <label for="orderedDitheringMatrixW">Ordered matrix width:</label>
     <input
       type="number"
@@ -104,10 +112,10 @@
     <h3>Input</h3>
     <canvas id="inputCanvas" style="width: 100px"></canvas>
     <h3>Output</h3>
-    <canvas id="outputCanvas"></canvas>
+    <canvas id="outputCanvas"></canvas><br />
     <a id="downloadLink" href="#" download="dithered.png">Download Result</a>
     <h3>Device colors</h3>
-    <canvas id="deviceColorsCanvas"></canvas>
+    <canvas id="deviceColorsCanvas"></canvas><br />
     <a
       id="downloadDeviceColorsLink"
       href="#"

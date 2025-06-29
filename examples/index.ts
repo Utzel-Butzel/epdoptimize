@@ -20,9 +20,6 @@ const downloadDeviceColorsLink = document.getElementById(
   "downloadLink"
 ) as HTMLAnchorElement;
 
-const ditherMethodSelect = document.getElementById(
-  "ditherMethod"
-) as HTMLSelectElement;
 const paletteSelect = document.getElementById(
   "paletteSelect"
 ) as HTMLSelectElement;
@@ -129,9 +126,24 @@ fileInput.addEventListener("change", async () => {
   await processImage();
 });
 
-const updateButton = document.getElementById(
-  "updateButton"
-) as HTMLButtonElement;
-updateButton.addEventListener("click", async () => {
-  await processImage();
+// Add event listeners to automatically update on input changes
+[
+  paletteSelect,
+  deviceColorsSelect,
+  ditheringTypeSelect,
+  errorDiffusionMatrixSelect,
+  orderedDitheringMatrixW,
+  orderedDitheringMatrixH,
+  randomDitheringTypeSelect,
+].forEach((el) => {
+  console.log("Adding change listener to", el);
+  el.addEventListener("change", async () => {
+    await processImage();
+  });
+  // For text inputs, also listen to 'input' events
+  if (el instanceof HTMLInputElement) {
+    el.addEventListener("input", async () => {
+      await processImage();
+    });
+  }
 });

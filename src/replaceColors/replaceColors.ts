@@ -41,6 +41,9 @@ export const replaceColors = (
       const index = originalColorsRgb.indexOf(colorRgb);
       // Get the corresponding color from the replaceColors array
       const colorMapRgb = replaceColorsRgb[index];
+      if (!colorMapRgb) {
+        return;
+      }
       imageData.data[i] = colorMapRgb[0];
       imageData.data[i + 1] = colorMapRgb[1];
       imageData.data[i + 2] = colorMapRgb[2];
