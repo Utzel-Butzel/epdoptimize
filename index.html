@@ -18,17 +18,109 @@
         margin-top: 1rem;
       }
     </style>
-    <script type="module" crossorigin src="/assets/index-AHlaL1FP.js"></script>
+    <script type="module" crossorigin src="/assets/index-ClzKW5jh.js"></script>
   </head>
   <body>
     <h1>EPDOptimize Interactive Example</h1>
+    <p>
+      <a href="https://github.com/Utzel-Butzel/epdoptimize"
+        >GitHub repository</a
+      >
+      |
+      <a href="http://paperlesspaper.de/en">eInk picture frames</a>
+    </p>
     <input type="file" id="fileInput" accept="image/*" />
+
+    <br />
+    <label for="paletteSelect">Palette:</label>
+    <select id="paletteSelect">
+      <option value="default">Default</option>
+      <option value="spectra6" selected>Spectra 6</option>
+      <option value="acep">Gallery</option>
+    </select>
+    <label for="deviceColorsSelect">Device colors:</label>
+    <select id="deviceColorsSelect">
+      <option value="default">Default</option>
+      <option value="spectra6" selected>Spectra 6</option>
+      <option value="acep">AcEP</option>
+    </select>
+
+    <br />
+
+    <label for="ditheringType">Dithering type:</label>
+    <select id="ditheringType">
+      <option value="errorDiffusion">Error Diffusion</option>
+      <option value="ordered">Ordered</option>
+      <option value="random">Random</option>
+      <option value="quantizationOnly">Quantization Only</option>
+    </select>
+    <label for="errorDiffusionMatrix">Error diffusion matrix:</label>
+    <select id="errorDiffusionMatrix">
+      <option value="floydSteinberg">Floyd-Steinberg</option>
+      <option value="atkinson">Atkinson</option>
+      <option value="falseFloydSteinberg">False Floyd-Steinberg</option>
+      <option value="jarvis">Jarvis</option>
+      <option value="stucki">Stucki</option>
+      <option value="burkes">Burkes</option>
+      <option value="sierra3">Sierra-3</option>
+      <option value="sierra2">Sierra-2</option>
+      <option value="sierra2-4a">Sierra-2-4A</option>
+    </select>
+    <!-- <label><input type="checkbox" id="serpentine" /> Serpentine</label> -->
+    <!-- <label for="orderedDitheringType">Ordered dithering type:</label> -->
+    <select id="orderedDitheringType">
+      <option value="bayer">Bayer</option>
+    </select>
+    <br />
+    <label for="orderedDitheringMatrixW">Ordered matrix width:</label>
+    <input
+      type="number"
+      id="orderedDitheringMatrixW"
+      value="4"
+      min="1"
+      max="8"
+      style="width: 3em"
+    />
+    <label for="orderedDitheringMatrixH">height:</label>
+    <input
+      type="number"
+      id="orderedDitheringMatrixH"
+      value="4"
+      min="1"
+      max="8"
+      style="width: 3em"
+    />
+    <label for="randomDitheringType">Random dithering type:</label>
+    <select id="randomDitheringType">
+      <option value="blackAndWhite">Black and White</option>
+      <option value="rgb">RGB</option>
+    </select>
+    <!--<label
+      ><input type="checkbox" id="sampleColorsFromImage" /> Sample colors from
+      image</label
+    >
+    <label for="numberOfSampleColors">Number of sample colors:</label>
+    <input
+      type="number"
+      id="numberOfSampleColors"
+      value="10"
+      min="1"
+      max="256"
+      style="width: 4em"
+    /> -->
+
     <h3>Input</h3>
-    <canvas id="inputCanvas"></canvas>
+    <canvas id="inputCanvas" style="width: 100px"></canvas>
     <h3>Output</h3>
-    <canvas id="outputCanvas"></canvas>
+    <canvas id="outputCanvas"></canvas><br />
     <a id="downloadLink" href="#" download="dithered.png">Download Result</a>
     <h3>Device colors</h3>
-    <canvas id="deviceColorsCanvas"></canvas>
+    <canvas id="deviceColorsCanvas"></canvas><br />
+    <a
+      id="downloadDeviceColorsLink"
+      href="#"
+      download="ditheredWithDeviceColors.png"
+      >Download Result</a
+    >
   </body>
 </html>
