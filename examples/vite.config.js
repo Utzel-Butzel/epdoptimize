@@ -3,6 +3,7 @@ import path from "path";
 
 export default defineConfig({
   root: __dirname,
+  base: "/epdoptimize/",
   resolve: {
     alias: {
       epdoptimize: path.resolve(__dirname, "../src"),

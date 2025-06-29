@@ -12,14 +12,6 @@ export default defineConfig({
     target: "esnext",
     sourcemap: true,
     outDir: "dist",
-    rollupOptions: {
-      external: ["react"],
-      output: {
-        globals: {
-          react: "React",
-        },
-      },
-    },
   },
   resolve: {
     alias: {

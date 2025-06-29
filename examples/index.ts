@@ -61,7 +61,7 @@ let lastImage: HTMLImageElement | null = null;
 // Load default image on page load
 window.addEventListener("DOMContentLoaded", async () => {
   const img = new Image();
-  img.src = "/example-dither.jpg";
+  img.src = import.meta.env.BASE_URL + "example-dither.jpg";
   await img.decode();
   lastImage = img;
   await processImage();
