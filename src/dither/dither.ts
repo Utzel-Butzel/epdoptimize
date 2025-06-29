@@ -8,7 +8,6 @@ import colorHelpers from "./functions/color-helpers";
 // import colorPaletteFromImage from "./functions/color-palette-from-image";
 import utilities from "./functions/utilities";
 import findClosestPaletteColor from "./functions/find-closest-palette-color";
-//const { createCanvas, Image, loadImage } = require('canvas')
 
 const defaultOptions = {
   ditheringType: "errorDiffusion",
@@ -27,12 +26,13 @@ const defaultOptions = {
   numberOfSampleColors: 10,
 };
 
-const dither = async (imageBuffer, canvas, opts) => {
-  if (!imageBuffer) {
+const dither = async (sourceCanvas, canvas, opts) => {
+  if (!sourceCanvas || !canvas) {
     return;
   }
 
-  const image = await imageDataFromBuffer(imageBuffer);
+  const ctx = sourceCanvas.getContext("2d");
+  const image = ctx.getImageData(0, 0, sourceCanvas.width, sourceCanvas.height);
 
   const options = { ...defaultOptions, ...opts };
 
@@ -127,7 +127,7 @@ const dither = async (imageBuffer, canvas, opts) => {
     }
   }
 
-  return imageDataToBuffer(image, canvas);
+  return imageDataToCanvas(image, canvas);
 };
 
 const getPixelColorValues = (pixelIndex, data) => {
@@ -189,31 +189,14 @@ const setColorPalette = (palette) => {
   return paletteArray.map((color) => colorHelpers.hexToRgb(color));
 };
 
-const imageDataFromBuffer = async (canvas) => {
-  //const image = await loadImage(buffer);
-  //const canvas = createCanvas(image.width, image.height);
-
-  // const canvas = document.createElement("canvasImageDataFromBuffer");
-  // canvas.width = image.width;
-  // canvas.height = image.height;
-
-  const ctx = canvas.getContext("2d");
-  // ctx.drawImage(image, 0, 0, image.width, image.height);
-  const imagedata = ctx.getImageData(0, 0, canvas.width, canvas.height);
-  return imagedata;
-};
-
-const imageDataToBuffer = (imageData, canvas) => {
-  //const canvas = document.createElement("canvas");
-  //var canvas = document.getElementById("caaann");
-
+const imageDataToCanvas = (imageData, canvas) => {
   canvas.width = imageData.width;
   canvas.height = imageData.height;
 
-  // const canvas = createCanvas(imageData.width, imageData.height);
   const ctx = canvas.getContext("2d");
+
   ctx.putImageData(imageData, 0, 0);
-  //const buffer = canvas.toBuffer();
+
   return canvas;
 };
 

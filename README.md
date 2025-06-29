@@ -2,12 +2,16 @@
 
 A JavaScript library for reducing image colors and dithering them to fit (color) eInk displays with optimal visual quality.
 
+[Interactive demo](https://utzel-butzel.github.io/epdoptimize/)
+
 ## Supported Displays
 
-- **AcEP**
-- **Spectra 6**
+- [AcEP](https://www.eink.com/brand/detail/Gallery)
+- [Spectra 6](https://www.eink.com/brand?bookmark=Spectra)
 
-![Intro image]([Isolated.png](https://raw.githubusercontent.com/Utzel-Butzel/epdoptimize/refs/heads/main/intro-image.jpg) "Intro image")
+You can easily add your own displays.
+
+![Intro image](https://raw.githubusercontent.com/Utzel-Butzel/epdoptimize/refs/heads/main/intro-image.jpg)
 
 ## Features
 
@@ -75,9 +79,17 @@ Dithering helps create the illusion of intermediate colors by distributing quant
 - **sierra2-4a:**
   - Sierra-2-4A dithering. A very lightweight and fast algorithm, distributing error to only three neighbors, suitable for speed-critical applications.
 
+### Add your own display
+
+TOOD: Add here
+
 ## Resources
 
 - [paperlesspaper](https://paperlesspaper.de)
+
+## Credits
+
+- [Dither me this](https://github.com/DitheringIdiot/dither-me-this)
 
 ---
 

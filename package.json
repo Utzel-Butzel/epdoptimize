@@ -8,12 +8,17 @@
   "scripts": {
     "build": "vite build",
     "prepare": "npm run build",
-    "examples:dev": "vite --config examples/vite.config.js"
+    "examples:dev": "vite --config examples/vite.config.js",
+    "build:examples": "vite build --config examples/vite.config.js",
+    "predeploy": "npm run build:examples",
+    "deploy": "npx gh-pages -d dist/examples",
+    "deploy:npm": "npm publish --access public"
   },
   "files": [
     "dist"
   ],
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "typescript": "^5.0.0",
     "vite": "^5.0.0"
   }

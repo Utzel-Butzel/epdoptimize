@@ -9,10 +9,11 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: "../dist/examples",
+    outDir: path.resolve(__dirname, "../dist/examples"),
     rollupOptions: {
-      input: "index.html",
+      input: path.resolve(__dirname, "index.html"),
     },
+    emptyOutDir: true,
   },
   server: {
     open: true,

@@ -1,0 +1,13 @@
+{
+  "name": "deploy-examples",
+  "version": "1.0.0",
+  "description": "Deploy examples to GitHub Pages",
+  "scripts": {
+    "build:examples": "vite build --config examples/vite.config.js",
+    "predeploy": "npm run build:examples",
+    "deploy": "npx gh-pages -d dist/examples"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
+  }
+}
