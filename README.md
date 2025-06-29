@@ -1,14 +1,16 @@
 # EDP Optimize
 
+[Interactive demo](https://utzel-butzel.github.io/epdoptimize/) 📦📦 📦
+
 A JavaScript library for reducing image colors and dithering them to fit (color) eInk displays with optimal visual quality.
 
 We are using it for our eInk picture frames at [paperlesspaper](https://paperlesspaper.de/en).
 
 The library works with both front end js (using the Browser Canvas API) and node.js (using [node-canvas](https://www.npmjs.com/package/canvas))
 
-Btw. you can order our new Spectra 6 eInk picture frame [here](https://www.smarthome-agentur.de/produkt/next-gen-e-paper-bilderrahmen-7-3-mit-app-anbindung-paperlesspaper-spectra6-esche-echtholz).
+Btw. you can order our new Spectra 6 eInk picture frame [here](https://www.smarthome-agentur.de/produkt/next-gen-e-paper-bilderrahmen-7-3-mit-app-anbindung-paperlesspaper-spectra6-esche-echtholz). 🎉
 
-[Interactive demo](https://utzel-butzel.github.io/epdoptimize/)
+[![Node.js Package](https://github.com/Utzel-Butzel/epdoptimize/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/Utzel-Butzel/epdoptimize/actions/workflows/npm-publish.yml)
 
 ## Supported Displays
 
@@ -93,22 +95,16 @@ Dithering helps create the illusion of intermediate colors by distributing quant
 
 #### Available Diffusion Algorithms
 
-- **floydSteinberg:**
-  - The classic Floyd-Steinberg error diffusion algorithm. Distributes quantization error to four neighboring pixels. Produces visually pleasing results and is widely used.
-- **falseFloydSteinberg:**
-  - A simplified version of Floyd-Steinberg. Distributes error to only three neighbors, making it faster but with slightly different dithering characteristics.
-- **jarvis:**
-  - Jarvis, Judice, and Ninke dithering. Spreads error over a wider area (three rows), resulting in smoother gradients but more blurring.
-- **stucki:**
-  - Stucki dithering. Similar to Jarvis but with different weights, offering a balance between smoothness and sharpness.
-- **burkes:**
-  - Burkes dithering. A simplified version of Stucki, using fewer neighbors and less computation, but still producing good results.
-- **sierra3:**
-  - Sierra-3 (original Sierra) dithering. Distributes error over three rows and is known for producing high-quality results with less blurring than Jarvis.
-- **sierra2:**
-  - Sierra-2 dithering. A reduced version of Sierra-3, using fewer neighbors for faster computation and less diffusion.
-- **sierra2-4a:**
-  - Sierra-2-4A dithering. A very lightweight and fast algorithm, distributing error to only three neighbors, suitable for speed-critical applications.
+| Algorithm               | Description                                                                                        |
+| ----------------------- | -------------------------------------------------------------------------------------------------- |
+| **floydSteinberg**      | Classic Floyd-Steinberg error diffusion. Distributes error to four neighbors. Visually pleasing.   |
+| **falseFloydSteinberg** | Simplified Floyd-Steinberg. Distributes error to three neighbors. Faster, slightly different look. |
+| **jarvis**              | Jarvis, Judice, and Ninke. Spreads error over three rows for smooth gradients, more blurring.      |
+| **stucki**              | Similar to Jarvis, different weights. Balances smoothness and sharpness.                           |
+| **burkes**              | Simplified Stucki. Fewer neighbors, less computation, good results.                                |
+| **sierra3**             | Sierra-3 (original). High-quality, less blurring than Jarvis.                                      |
+| **sierra2**             | Reduced Sierra-3. Fewer neighbors, faster, less diffusion.                                         |
+| **sierra2-4a**          | Lightweight, fast. Distributes error to three neighbors. Good for speed-critical use.              |
 
 ## Using Your Own Colors
 
