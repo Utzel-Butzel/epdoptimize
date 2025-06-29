@@ -7,6 +7,8 @@ A JavaScript library for reducing image colors and dithering them to fit (color)
 - **AcEP**
 - **Spectra 6**
 
+![Intro image]([Isolated.png](https://raw.githubusercontent.com/Utzel-Butzel/epdoptimize/refs/heads/main/intro-image.jpg) "Intro image")
+
 ## Features
 
 - **Dithering Algorithms:** Multiple high-quality dithering options to improve color blending and gradients.
