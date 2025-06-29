@@ -2,6 +2,8 @@
 
 A JavaScript library for reducing image colors and dithering them to fit (color) eInk displays with optimal visual quality.
 
+We are using it for our eInk picture frames at [paperlesspaper](https://paperlesspaper.de/en).
+
 [Interactive demo](https://utzel-butzel.github.io/epdoptimize/)
 
 ## Supported Displays
