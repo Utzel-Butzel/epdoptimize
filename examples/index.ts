@@ -17,7 +17,7 @@ const downloadLink = document.getElementById(
   "downloadLink"
 ) as HTMLAnchorElement;
 const downloadDeviceColorsLink = document.getElementById(
-  "downloadLink"
+  "downloadDeviceColorsLink"
 ) as HTMLAnchorElement;
 
 const paletteSelect = document.getElementById(
@@ -113,6 +113,8 @@ async function processImage() {
     originalColors: palette,
     replaceColors: deviceColors,
   });
+
+  console.log("Dithered data:", deviceColorsCanvas.toDataURL("image/png"));
   downloadDeviceColorsLink.href = deviceColorsCanvas.toDataURL("image/png");
 }
 
