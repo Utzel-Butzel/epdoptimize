@@ -138,6 +138,7 @@ const dithered = ditherImage(image, options);
 ## Credits
 
 - [Dither me this](https://github.com/DitheringIdiot/dither-me-this)
+- [Inkify](https://github.com/cmdwtf/Inkify)
 
 ---
 
