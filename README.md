@@ -8,7 +8,9 @@ We are using it for our eInk picture frames at [paperlesspaper](https://paperles
 
 The library works with both front end js (using the Browser Canvas API) and node.js (using [node-canvas](https://www.npmjs.com/package/canvas))
 
-Btw. you can order our new Spectra 6 eInk picture frame [here](https://www.smarthome-agentur.de/produkt/next-gen-e-paper-bilderrahmen-7-3-mit-app-anbindung-paperlesspaper-spectra6-esche-echtholz). 🎉
+[Blogpost](https://paperlesspaper.de/en/blog/dither-eink-tool-open-source)
+
+Btw. you can order our new Spectra 6 eInk picture frame [here](https://paperlesspaper.de/buy-7-inch-epaper-picture-frame). 🎉
 
 [![Node.js Package](https://github.com/Utzel-Butzel/epdoptimize/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/Utzel-Butzel/epdoptimize/actions/workflows/npm-publish.yml)
 
