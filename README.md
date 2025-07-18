@@ -83,6 +83,8 @@ const prepared = replaceColors(ditheredCanvas,ditheredCanvasWithDeviceColors {
 
 Add these options to your `ditherImage` call to customize dithering behavior for your use case.
 
+![Convertion Example](https://paperlesspaper.de/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fwirewire%2Fimage%2Fupload%2Feink-color-convertion-1.jpg.jpg&w=3840&q=75)
+
 ## How It Works
 
 ### Color Calibration
