@@ -2,7 +2,11 @@
 
 [Interactive demo](https://utzel-butzel.github.io/epdoptimize/) 📦📦 📦
 
-A JavaScript library for reducing image colors and dithering them to fit (color) eInk displays with optimal visual quality.
+A JavaScript library for reducing image colors and dithering them to fit (color) eInk displays for better visual quality.
+
+### Why?
+
+E-paper displays have a more limited color range than LCD screens. By their nature, they cannot reproduce the full sRGB spectrum and can only reflect light rather than emit it. To help minimize these "limitations", this library applies color calibration that translates internal colors to better match the display’s capabilities.
 
 We are using it for our eInk picture frames at [paperlesspaper](https://paperlesspaper.de/en).
 
