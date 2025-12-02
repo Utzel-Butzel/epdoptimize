@@ -47,7 +47,7 @@ npm install epdoptimize
 ```
 
 ```js
-import { ditherImage, getDefaultPalettes, getDeviceColors } from 'epdoptimize';
+import { ditherImage, getDefaultPalettes, getDeviceColors, replaceColors } from 'epdoptimize';
 
 // Access the canvas elements
 const inputCanvas = document.getElementById("inputCanvas");
@@ -58,19 +58,18 @@ const palette = getDefaultPalettes('spectra6');
 const spectra6colors = getDeviceColors('spectra6'); // Spectra 6 color set (can be default, spectra6 or acep)
 
 const options = {
-  algorithm: 'floydSteinberg',
-  palette,
+    algorithm: 'floydSteinberg',
+    palette,
 };
 
 // Dither the image
 const dithered = ditherImage(inputCanvas, ditheredCanvas, options);
 
-// Convert the colors to the displays native colors
-const prepared = replaceColors(ditheredCanvas,ditheredCanvasWithDeviceColors {
+// Convert the colors to the display's native colors
+const prepared = replaceColors(ditheredCanvas, ditheredCanvasWithDeviceColors, {
     originalColors: palette,
     replaceColors: spectra6colors
 });
-
 ```
 
 ## Dithering Options
